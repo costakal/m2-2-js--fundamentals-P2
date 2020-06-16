@@ -9,7 +9,13 @@
 // For example: greeLong(["bob", "daniel"]) returns ["Hello daniel"]
 
 function greetLong(lst) {
-  // lst is an array of strings
+  const newSet = lst.filter(function (item) {
+    return item.length >= 4;
+  });
+  const newArray = newSet.map(function (newItem) {
+    return "Hello " + newItem;
+  });
+  return newArray;
 }
-// -------------------------------------------------------------------------
-console.log('Q7 greetLong()', greetLong(['Scott', 'Bob', 'Ric', 'Jim']));
+
+console.log(greetLong(["Scott", "Bob", "Ric", "Jim"]));
