@@ -5,11 +5,18 @@
 
 // Q7
 // Returns a new list with all the elements of lst that are length greater than 5
+
+// lst is an array of strings
+
+// go through the array and check for thw amount of characters in each item within the array
+// if its greater than 5 characters that item needs to be moved into a new array
+// we want to return the new array only with more than 5 characters
+
 function keepLong(lst) {
-  // lst is an array of strings
+  let longWords = lst.filter((word) => word.length > 5);
+  return longWords;
 }
 // -------------------------------------------------------------------------
 console.log(
-  'Q5 keepLong()',
-  keepLong(['Cyborg', 'Robin', 'Batman', 'Superman', 'Aquaman', 'Flash'])
+  keepLong(["Cyborg", "Robin", "Batman", "Superman", "Aquaman", "Flash"])
 );
