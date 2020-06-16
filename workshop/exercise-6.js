@@ -6,8 +6,17 @@
 // Q6
 // Write a function that accepts a list of numbers and returns a new list with
 // all of the even numbers removed.
-function removeEvens(lst) {
+
+function removeEvens(numbers) {
   // lst is an array of strings
+
+  let result = numbers.filter((number) => {
+    if (!(number % 2 === 0)) {
+      return true;
+    }
+    return false;
+  });
+  return result;
 }
 // -------------------------------------------------------------------------
-console.log('Q4 removeEvens()', removeEvens([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
+console.log(removeEvens([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
