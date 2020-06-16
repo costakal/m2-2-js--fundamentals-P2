@@ -19,11 +19,22 @@
 ```js
 // Formula for area of rectangle
 
+length x width
+
 // Turn that into a more math-like function...
+
+A = length * width
 
 // Define JavaScript function
 
+const areaRectangle = function(length, width, unit) {
+  return length * width;
+}
+
 // Call the JavaScript function
+
+areaRectangle(17, 36);
+
 ```
 
 ---
@@ -57,9 +68,26 @@
 ```js
 // Q1. Write a function that returns the sum of 3 numbers.
 
+const sum = function(num1, num2, num3) {
+  return num1 + num2 + num3;
+}
+sum(5, 5, 5)
+
 // Q2. Write a function that returns the square of a number minus twice the number.
 
+const math = function(num) {
+  return (num * num) - (num * 2);
+}
+math(5)
+
 // Q3. Write a function that returns the a person's full name, given their first and last names.
+
+const fullName = function(first, last) {
+  return first + ' ' + last;
+  // OR USE THUS RETURN//
+  return `${first} ${last}`
+}
+fullName('Costa', 'Kal')
 ```
 
 ---

@@ -93,6 +93,9 @@ const food = 'I love bacon';
 ```js
 // Example
 const sentence = 'Bingo was his name.';
+
+const name = sentence.slice(0, 5);
+console.log(name)
 ```
 
 ---
@@ -105,6 +108,11 @@ The `.concat()` method is used to join two or more strings.
 // Example
 let partOne = 'Do or do not.';
 let partTwo = 'There is no try.';
+
+let fullSentence = partOne.concat(partTwo);
+console.log(fullSentence);
+
+fullSentence = partOne.concat(' ').concat(partTwo)
 ```
 
 ---
@@ -116,6 +124,7 @@ The `.split()` method "split" a string into an array of _substrings_.
 ```js
 // Example
 const truth = 'The greatest teacher, failure is.';
+truth.split(', '); //{}
 ```
 
 ---
@@ -130,6 +139,9 @@ This method returns -1 if the value to search for never occurs.
 // Example
 let yodaSpeak =
   'Fear is the path to the dark side. Fear leads to anger. Anger leads to hate. Hate leads to suffering.';
+
+  yodaSpeak.indexOf('dark side'); // 24
+  yodaSpeak.indexOf('bacon'); // -1 --> the default if it can't find it
 ```
 
 _Why would JavaScript decide to return `-1` instead of some other value? like `0`?_
@@ -145,7 +157,10 @@ Turn an input string into another string
 <Timer initialTime={2} />
 
 ```js
-const input = 'I am a really long sentence, look how many words I have!';
+const longSentence = 'I am a really long sentence, look how many words I have!';
+
+const shorter = longSentence.slice(19, 37);
+console.log(shorter);
 
 // output: "sentence, look how"
 ```
@@ -155,7 +170,11 @@ const input = 'I am a really long sentence, look how many words I have!';
 <Timer initialTime={2} />
 
 ```js
-const input = 'Hi World';
+const greeting = 'Hi World';
+const newGreeting = greeting.replace('Hi', 'Hello');
+
+console.log(newGreeting);
+
 
 // output: "Hello world!"
 ```
@@ -165,7 +184,17 @@ const input = 'Hi World';
 <Timer initialTime={2} />
 
 ```js
-const input = 'I am 23 years old!';
+const age = 'I am 23 years old!';
+
+let ageAmended = age.replace(' 23 years', '');
+console.log(ageAmended);
+
+// OR //
+
+const age = 'I am 23 years old!';
+
+let ageAmended = age.slice(5, 13);
+console.log(ageAmended);
 
 // output: "I am old!"
 ```
@@ -175,7 +204,19 @@ const input = 'I am 23 years old!';
 <Timer initialTime={2} />
 
 ```js
-const input = 'How are you today?';
+const ask = 'How are you today?';
+
+let yesterdayList = ask.replace('today','yesterday');
+let todayList = yesterdayList.split(' ');
+console.log(todayList);
+
+// OR //
+
+const ask = 'How are you today?';
+
+let yesterdayList = ask.replace('today','yesterday').split(' ');;
+console.log(yesterdayList);
+
 
 // output: ["how", "are", "you", "yesterday?"]
 ```

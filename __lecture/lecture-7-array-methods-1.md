@@ -45,7 +45,9 @@ const lexicon = [
   'silence',
 ];
 
-let sentence = lexicon.join();
+let fullSentence = lexicon.join(' ').concat('.');
+console.log(fullSentence);
+
 ```
 
 ---
@@ -71,3 +73,41 @@ Let's dip into the internet and see if we can learn all of these methods collect
 - Take given methods
   - find an explanation/definition, then write your own.
   - create two examples of each method in use. Be creative. 😛
+
+
+The pop() method removes the last element of an array, and returns that element.
+
+The sort() method sorts an array alphabetically:
+
+
+```js
+
+let arr = ['John', 'Scott', 'Jackie', 'Costa', 'Ethan', 'Eric'];
+
+let inOrder = arr.sort();
+
+console.log(inOrder);
+
+arr.pop(inOrder);
+console.log(inOrder.pop());
+
+
+let arr = [];
+for (i = 0; i <= 100; i++) {
+    arr.push(i);
+}
+console.log(arr.sort());
+
+console.log(arr.pop());
+
+const oldMenu = ['bacon','avocado toast','human flesh'];
+const newMenu = oldMenu.pop();
+console.log(newMenu);
+
+
+
+
+
+
+
+```
